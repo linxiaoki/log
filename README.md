@@ -1,2 +1,2 @@
-日志
-- [ubuntu美化](https://github.com/linxiaoki/log/tree/master/linux/ubuntu)
+日志记录
+- [ubuntu美化与升级](https://github.com/linxiaoki/log/tree/master/linux/ubuntu)
