@@ -1,3 +1,6 @@
+[挂载](###挂载)
+
+### 美化
 ubuntu做了美化和升级。
 主要参考：[Windows 10 太难用，如何定制你的 Ubuntu？](https://www.chainnews.com/articles/105102868075.htm)
 
@@ -19,4 +22,7 @@ ubuntu 升级
 - 图标样式
 
 效果图
+
+### 挂载
+
 
