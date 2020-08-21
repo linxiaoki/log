@@ -26,4 +26,7 @@ ubuntu 升级
 
 ### 挂载
 
+https://jakting.com/archives/ubuntu-rw-windows-files.html
+https://zhuanlan.zhihu.com/p/91643438
+
 
