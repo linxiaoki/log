@@ -39,7 +39,6 @@ apt-get autoremove -purge
 dpkg --configure -a  # 更新的时候
 update-grub  # 重点
 ```
-ubuntu 升级
 
 6. 代理，系统升级慢主要是因为下载 flashplugin-installer 软件，用镜像也不行
 ```bash
