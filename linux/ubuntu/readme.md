@@ -1,7 +1,7 @@
 [美化](#美化)
 
 [挂载](#挂载)
-
+-----
 
 ## 美化
 ubuntu做了美化和升级。
@@ -62,7 +62,10 @@ apt install -y proxychain  # 代理
 
 
 ### 挂载
+```bash
+fdisk -l  #查看磁盘分区
 
+```
 https://jakting.com/archives/ubuntu-rw-windows-files.html
 https://zhuanlan.zhihu.com/p/91643438
 
