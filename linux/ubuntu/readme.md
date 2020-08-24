@@ -64,7 +64,7 @@ apt install -y proxychain  # 代理
 效果图
 
 
-### 挂载
+## 挂载
 ```bash
 fdisk -l  #查看磁盘分区
 # 新建目录 
@@ -80,7 +80,7 @@ fuser -cu /dev/sda1  # 查看哪个进程在使用此分区
 https://jakting.com/archives/ubuntu-rw-windows-files.html
 https://zhuanlan.zhihu.com/p/91643438
 
-### 系统重装
+## 系统重装
 ‵``bash
 # 切换到 / 目录，打包目录 /media/Disk/myDisk
 tar -cvpzf /media/Disk/myDisk/ubuntu_backup@`date +%Y-%m+%d`.tar.gz --exclude=/proc --exclude=/tmp --exclude=/boot --exclude=/home --exclude=/lost+found --exclude=/media --exclude=/mnt --exclude=/run /  # 打包 / 
