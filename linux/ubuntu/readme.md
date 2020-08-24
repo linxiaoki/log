@@ -19,9 +19,9 @@ sudo apt-get install gnome-shell-extensions
 sudo apt install chrome-gnome-shell # 安装chrome 扩展，可以直接在网页安装
 sudo apt-get autoremove --purge gnome-shell-extension-Ubuntu-dock -y # 删除自带的dock ，不然会有冲突
 sudo apt install fonts-wqy-microhei  #字体
-
 ```
-2. 下载[主题、图标](https://www.gnome-look.org/browse/cat/)和好看的[桌面背景图片](https://wallhaven.cc/toplist)到`/usr/share/themes  ./icons ./backgrounds`目录下，使用tweaks的外观进行配置；配置字体
+
+2. 下载[主题、图标](https://www.gnome-look.org/browse/cat/)和好看的[桌面背景图片](https://wallhaven.cc/toplist)到`/usr/share/themes  ./icons ./backgrounds`目录下，使用tweaks的外观进行配置; 更改默认字体; 更改输入法`apt install ibus-rime`
 
 3. 浏览器安装相应(插件)[https://extensions.gnome.org/]，开启扩展[dash-to-dock](https://extensions.gnome.org/extension/307/dash-to-dock/)。
 
@@ -81,12 +81,11 @@ https://jakting.com/archives/ubuntu-rw-windows-files.html
 https://zhuanlan.zhihu.com/p/91643438
 
 ## 系统重装
-‵``bash
+```bash
 # 切换到 / 目录，打包目录 /media/Disk/myDisk
 tar -cvpzf /media/Disk/myDisk/ubuntu_backup@`date +%Y-%m+%d`.tar.gz --exclude=/proc --exclude=/tmp --exclude=/boot --exclude=/home --exclude=/lost+found --exclude=/media --exclude=/mnt --exclude=/run /  # 打包 / 
 tar -cvpzf /media/Disk/my_Disk/ubuntu_home_backup@`date +%Y-%m-%d`.tar.gz /home   # 打包 /home,可选
 tar -cvpzf /media/Disk/myDisk/ubuntu_boot_backup@`date +%Y-%m-%d`.tar.gz /boot    # 打包  /boot 重要
-
 ```
 
 [参考:Ubuntu系统备份和还原](https://blog.csdn.net/qq_35523593/article/details/78545530)
