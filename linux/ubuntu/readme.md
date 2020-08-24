@@ -69,7 +69,7 @@ apt install -y proxychain  # 代理
 fdisk -l  #查看磁盘分区
 # 新建目录 
 # ntfs 是分区格式，/mnt/F是挂载目录, utf8 ， 0 代表任何用户可读写。
-mount -t ntfs /dev/sda2 /mnt/F -o iocharset=utf8,umask=0
+mount -t ntfs /dev/sda2 /mnt/F -o iocharset=utf8,umask=0  # 可以在 /.bashrc 设置一个永久别名
 unmount /dev/sda2  # 取消挂载
 
 # 管理
