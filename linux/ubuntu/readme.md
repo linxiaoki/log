@@ -1,6 +1,9 @@
-[美化](#美化)
+## [美化](#美化)
 
-[挂载](#挂载)
+## [挂载](#挂载)
+
+## [系统备份,避免系统备份重装啊。](#系统备份)
+
 -----
 
 ## 美化
@@ -64,9 +67,29 @@ apt install -y proxychain  # 代理
 ### 挂载
 ```bash
 fdisk -l  #查看磁盘分区
+# 新建目录 
+# ntfs 是分区格式，/mnt/F是挂载目录, utf8 ， 0 代表任何用户可读写。
+mount -t ntfs /dev/sda2 /mnt/F -o iocharset=utf8,umask=0
+unmount /dev/sda2  # 取消挂载
 
+# 管理
+fuser -cu /dev/sda1  # 查看哪个进程在使用此分区
+
+# /etc/fstab 文件末尾加上上面的 mount 命令，即可开机自动挂载
 ```
 https://jakting.com/archives/ubuntu-rw-windows-files.html
 https://zhuanlan.zhihu.com/p/91643438
+
+### 系统重装
+‵``bash
+# 切换到 / 目录，打包目录 /media/Disk/myDisk
+tar -cvpzf /media/Disk/myDisk/ubuntu_backup@`date +%Y-%m+%d`.tar.gz --exclude=/proc --exclude=/tmp --exclude=/boot --exclude=/home --exclude=/lost+found --exclude=/media --exclude=/mnt --exclude=/run /  # 打包 / 
+tar -cvpzf /media/Disk/my_Disk/ubuntu_home_backup@`date +%Y-%m-%d`.tar.gz /home   # 打包 /home,可选
+tar -cvpzf /media/Disk/myDisk/ubuntu_boot_backup@`date +%Y-%m-%d`.tar.gz /boot    # 打包  /boot 重要
+
+```
+
+[参考:Ubuntu系统备份和还原](https://blog.csdn.net/qq_35523593/article/details/78545530)
+
 
 
