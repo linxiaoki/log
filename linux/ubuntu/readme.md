@@ -83,9 +83,11 @@ https://zhuanlan.zhihu.com/p/91643438
 ## 系统重装
 ```bash
 # 切换到 / 目录，打包目录 /media/Disk/myDisk
-tar -cvpzf /media/Disk/myDisk/ubuntu_backup@`date +%Y-%m+%d`.tar.gz --exclude=/proc --exclude=/tmp --exclude=/boot --exclude=/home --exclude=/lost+found --exclude=/media --exclude=/mnt --exclude=/run /  # 打包 / 
+tar -cvpzf /media/Disk/myDisk/ubuntu_backup@`date +%Y-%m+%d`.tar.gz --exclude=/proc --exclude=/tmp --exclude=/boot --exclude=/home --exclude=/lost+found --exclude=/media --exclude=/mnt --exclude=/run / --warning=no-file-change   # 打包 / 
 tar -cvpzf /media/Disk/my_Disk/ubuntu_home_backup@`date +%Y-%m-%d`.tar.gz /home   # 打包 /home,可选
 tar -cvpzf /media/Disk/myDisk/ubuntu_boot_backup@`date +%Y-%m-%d`.tar.gz /boot    # 打包  /boot 重要
+
+# 恢复时删除根目录文件，在解压到根目录下，并创建 /proc, /tmp,/lost+found,等文件夹
 ```
 
 [参考:Ubuntu系统备份和还原](https://blog.csdn.net/qq_35523593/article/details/78545530)
