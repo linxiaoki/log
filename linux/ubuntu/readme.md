@@ -1,9 +1,8 @@
-## [美化](#美化)
+- [美化](#美化)
 
-## [挂载](#挂载)
+- [挂载](#挂载)
 
-## [系统备份,稳一手。](#系统备份)
-
+- [系统备份,稳一手。](#系统重装)
 -----
 
 ## 美化
@@ -58,10 +57,11 @@ apt install -y proxychain  # 代理
 
 待更改：
 - 顶部的流量条样式
-- dock重复
+- nug：电脑休眠后重开会造成dock重复
 - 图标样式
 
-效果图
+<img style="text-align:center" src="https://tva1.sinaimg.cn/large/005zbIM7ly1gi2tgrh6yaj311y0lckcw.jpg"></img>
+
 
 
 ## 挂载
