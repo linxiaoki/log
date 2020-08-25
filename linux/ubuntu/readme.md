@@ -3,6 +3,8 @@
 - [挂载](#挂载)
 
 - [系统备份,稳一手。](#系统重装)
+
+- [系统假死怎么办](#安全重启)
 -----
 
 ## 美化
@@ -20,7 +22,7 @@ sudo apt-get autoremove --purge gnome-shell-extension-Ubuntu-dock -y # 删除自
 sudo apt install fonts-wqy-microhei  #字体
 ```
 
-2. 下载[主题、图标](https://www.gnome-look.org/browse/cat/)和好看的[桌面背景图片](https://wallhaven.cc/toplist)到`/usr/share/themes  ./icons ./backgrounds`目录下，使用tweaks的外观进行配置; 更改默认字体; 更改输入法`apt install ibus-rime`
+2. 下载[主题、图标](https://www.gnome-look.org/browse/cat/)和好看的[桌面背景图片](https://wallhaven.cc/toplist)到`/usr/share/themes  ./icons ./backgrounds`目录下，使用tweaks的外观进行配置; 更改默认字体; 更改默认输入法`apt install ibus-rime`，并[配置](https://github.com/wongdean/rime-settings)
 
 3. 浏览器安装相应(插件)[https://extensions.gnome.org/]，开启扩展[dash-to-dock](https://extensions.gnome.org/extension/307/dash-to-dock/)。
 
@@ -62,6 +64,8 @@ apt install -y proxychain  # 代理
 
 <img style="text-align:center" src="https://tva1.sinaimg.cn/large/005zbIM7ly1gi2tgrh6yaj311y0lckcw.jpg"></img>
 
+## 辅助功能
+
 
 
 ## 挂载
@@ -92,5 +96,24 @@ tar -cvpzf /media/Disk/myDisk/ubuntu_boot_backup@`date +%Y-%m-%d`.tar.gz /boot  
 
 [参考:Ubuntu系统备份和还原](https://blog.csdn.net/qq_35523593/article/details/78545530)
 
-
+## 安全重启
+惨痛经验告诉我，系统假死一定不能强制关机。
+[参考](https://blog.csdn.net/sunny_580/article/details/78996975)
+1. 可以切换到其他终端时,注销桌面重新登录
+```bash
+sudo pkill Xorg
+# 或者
+sudo restart lightdm
+```
+2. 按啥都没反应，使用`reisub`大法
+左手按住 ctrl+alt不放开，右手按 SysRq（和截屏键在一个位置），持续一秒；
+然后保持左手不松开，右手依次按下r,e,i,s,u,b，每按一个按钮都要持续一秒钟左右，最后会重启。
+tips:记忆窍门=>热(re)爱(i)sub.
+解释：
+- r : unRaw 将键盘控制从 X Server 那里抢回来
+- e : tErminate 给所有进程发送 SIGTERM 信号，让它们自己解决善后
+- i : kIll 给所有进程发送 SIGKILL 信号，强制他们马上关闭
+- s : Sync 将所有数据同步至磁盘
+- u : Unmount 将所有分区挂载为只读模式
+- b : reBoot 重启
 
