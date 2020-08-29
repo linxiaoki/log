@@ -88,6 +88,7 @@ https://zhuanlan.zhihu.com/p/91643438
 ```bash
 # 切换到 / 目录，打包目录 /media/Disk/myDisk
 ` # 打包 / 
+tar -cvpzf /mnt/my_Disk/ubuntu_backup/ubuntu_backup@`date +%Y-%m-%d`.tar.gz --exclude=/proc --exclude=/tmp --exclude=/boot --exclude=/home --exclude=/lost+found --exclude=/media --exclude=/mnt --exclude=/run --exclude=/sys / >/tmp/tarlog
 time tar -cvpzf /media/Disk/my_Disk/ubuntu_home_backup@`date +%Y-%m-%d`.tar.gz /home   # 打包 /home,可选
 time tar -cvpzf /media/Disk/myDisk/ubuntu_boot_backup@`date +%Y-%m-%d`.tar.gz /boot    # 打包  /boot 重要
 
