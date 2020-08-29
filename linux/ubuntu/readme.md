@@ -88,8 +88,8 @@ https://zhuanlan.zhihu.com/p/91643438
 ```bash
 # 切换到 / 目录，打包目录 /media/Disk/myDisk
 ` # 打包 / 
-tar -cvpzf /media/Disk/my_Disk/ubuntu_home_backup@`date +%Y-%m-%d`.tar.gz /home   # 打包 /home,可选
-tar -cvpzf /media/Disk/myDisk/ubuntu_boot_backup@`date +%Y-%m-%d`.tar.gz /boot    # 打包  /boot 重要
+time tar -cvpzf /media/Disk/my_Disk/ubuntu_home_backup@`date +%Y-%m-%d`.tar.gz /home   # 打包 /home,可选
+time tar -cvpzf /media/Disk/myDisk/ubuntu_boot_backup@`date +%Y-%m-%d`.tar.gz /boot    # 打包  /boot 重要
 
 # 恢复时删除根目录文件，在解压到根目录下，并创建 /proc, /tmp,/lost+found,等文件夹
 ```
@@ -116,4 +116,10 @@ tips:记忆窍门=>热(re)爱(i)sub.
 - s : Sync 将所有数据同步至磁盘
 - u : Unmount 将所有分区挂载为只读模式
 - b : reBoot 重启
+
+## 零零散散
+打包统计压缩前大小
+```
+tar -tvf ubuntu_home.tar.gz |awk '{sum+=$3} END {print "SUM=",sum/1024/1024/1024}'
+```
 
