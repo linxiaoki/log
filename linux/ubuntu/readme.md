@@ -2,6 +2,8 @@
 
 - [挂载](#挂载)
 
+- [工具软件](#工具软件)
+
 - [系统备份,稳一手。](#系统重装)
 
 - [系统假死怎么办](#安全重启)
@@ -64,7 +66,8 @@ apt install -y proxychain  # 代理
 
 <img style="text-align:center" src="https://tva1.sinaimg.cn/large/005zbIM7ly1gi2tgrh6yaj311y0lckcw.jpg"></img>
 
-## 辅助功能
+## 工具软件
+- 下载工具 aria2, [参考,aria2的配置使用](https://www.jianshu.com/p/2f7e087f452b)
 
 
 
