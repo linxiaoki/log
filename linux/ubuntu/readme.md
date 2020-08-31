@@ -24,7 +24,8 @@ sudo apt-get autoremove --purge gnome-shell-extension-Ubuntu-dock -y # 删除自
 sudo apt install fonts-wqy-microhei  #字体
 ```
 
-2. 下载[主题、图标](https://www.gnome-look.org/browse/cat/)和好看的[桌面背景图片](https://wallhaven.cc/toplist)到`/usr/share/themes  ./icons ./backgrounds`目录下，使用tweaks的外观进行配置; 更改默认字体; 更改默认输入法`apt install ibus-rime`，并[配置](https://github.com/wongdean/rime-settings)
+2. 下载[主题、图标](https://www.gnome-look.org/browse/cat/)和好看的[桌面背景图片](https://wallhaven.cc/toplist)到`/usr/share/themes  ./icons ./backgrounds`目录下，使用tweaks的外观进行配置; 更改默认字体; 更改默认输入法`apt install ibus-rime`，并[配置](https://github.com/wongdean/rime-settings),更改绑定上下页快捷键为 `, .`（打开文件`default.custom.yaml`，取消注释`comma`和`period`行。
+
 
 3. 浏览器安装相应(插件)[https://extensions.gnome.org/]，开启扩展[dash-to-dock](https://extensions.gnome.org/extension/307/dash-to-dock/)。
 
