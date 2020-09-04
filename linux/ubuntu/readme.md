@@ -59,11 +59,8 @@ update-grub  # 重点
 apt install -y proxychain  # 代理
 配置代理，通过 v2ray 
 ```
+待：使用 iptable 进行代理转发。
 
-待更改：
-- 顶部的流量条样式
-- nug：电脑休眠后重开会造成dock重复
-- 图标样式
 
 <img style="text-align:center" src="https://tva1.sinaimg.cn/large/005zbIM7ly1gi2tgrh6yaj311y0lckcw.jpg"></img>
 
