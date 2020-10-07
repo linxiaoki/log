@@ -66,8 +66,9 @@ apt install -y proxychain  # 代理
 
 ## 工具软件
 - 下载工具 aria2, [参考,aria2的配置使用](https://www.jianshu.com/p/2f7e087f452b)
-
-
+- zsh 工具下载安装后，
+  - 切换：`which zsh` -> `chsh -s /zsh目录`
+  - `.zshrc`文件末尾添加 `source ~/.bash_profile`,加载bash环境变量 
 
 ## 挂载
 ```bash
@@ -95,7 +96,6 @@ time tar -cvpzf /media/Disk/myDisk/ubuntu_boot_backup@`date +%Y-%m-%d`.tar.gz /b
 
 # 恢复时删除根目录文件，在解压到根目录下，并创建 /proc, /tmp,/lost+found,等文件夹
 ```
-
 [参考:Ubuntu系统备份和还原](https://blog.csdn.net/qq_35523593/article/details/78545530)
 
 ## 安全重启
