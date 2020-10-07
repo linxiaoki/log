@@ -16,3 +16,8 @@ bash 和  zsh 切换
 `chsh -s /usr/bin/bash   ./zsh`
 
 
+vscode 插件vim：
+gt ,gT 左右切换标签页
+cw 清除单词
+
+ctrl+space 自动补全代码
