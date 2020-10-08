@@ -17,7 +17,9 @@ bash 和  zsh 切换
 
 
 vscode 插件vim：
-gt ,gT 左右切换标签页
-cw 清除单词
+  gt ,gT 左右切换标签页
+  cw 清除单词
 
-ctrl+space 自动补全代码
+  ctrl+space 自动补全代码
+  
+  :w !sudo tee % >/dev/null   强制保存
