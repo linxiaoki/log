@@ -125,3 +125,7 @@ tips:记忆窍门=>热(re)爱(i)sub.
 tar -tvf ubuntu_home.tar.gz |awk '{sum+=$3} END {print "SUM=",sum/1024/1024/1024}'
 ```
 
+双系统win10时间早8小时，可以运行命令,[参考](https://www.jianshu.com/p/5c1db6364141)
+`timedatectl set-local-rtc 1 --adjust-system-clock`
+
+
