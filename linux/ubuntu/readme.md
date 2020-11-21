@@ -53,6 +53,13 @@ apt-get autoremove -purge
 dpkg --configure -a  # 更新的时候
 update-grub  # 重点
 ```
+8. 美化grub引导界面（[下载主题](https://www.gnome-look.org/p/1009236/)）
+```
+mkdir /boot/grub/themes
+//解压包
+//执行 install.sh
+```
+9. 紫色背景一闪而过,修改/etc/grub.d/05_debian_theme，set_background_image
 
 7. 代理，系统升级慢主要是因为下载 flashplugin-installer 软件，用镜像也不行
 ```bash
