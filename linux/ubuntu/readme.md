@@ -34,8 +34,6 @@ sudo apt install fonts-wqy-microhei  #字体
 4. 顶部的流量监控
 ```bash
 sudo apt-get install gnome-system-monitor
-sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor  
-sudo apt-get updates
 sudo apt-get install indicator-sysmonitor
 # 设置开机自启，添加 {net}
 ```
@@ -55,15 +53,15 @@ apt-get autoremove -purge
 dpkg --configure -a  # 更新的时候
 update-grub  # 重点
 ```
-8. 美化grub引导界面（[下载主题](https://www.gnome-look.org/p/1009236/)）
+7. 美化grub引导界面（[下载主题](https://www.gnome-look.org/p/1009236/)）
 ```
 mkdir /boot/grub/themes
 //解压包
 //执行 install.sh
 ```
-9. 紫色背景一闪而过,修改??
+8. 紫色背景一闪而过, [这个插件](https://extensions.gnome.org/extension/3037/good-bye-gdm-flick/)
 
-7. 代理，系统升级慢主要是因为下载 flashplugin-installer 软件，用镜像也不行
+9. 代理，系统升级慢主要是因为下载 flashplugin-installer 软件，用镜像也不行
 ```bash
 apt install -y proxychains  # 代理
 配置代理，通过 v2ray 
