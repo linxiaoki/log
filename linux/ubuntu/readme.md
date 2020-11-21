@@ -34,6 +34,8 @@ sudo apt install fonts-wqy-microhei  #字体
 4. 顶部的流量监控
 ```bash
 sudo apt-get install gnome-system-monitor
+sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor  
+sudo apt-get updates
 sudo apt-get install indicator-sysmonitor
 # 设置开机自启，添加 {net}
 ```
@@ -59,11 +61,11 @@ mkdir /boot/grub/themes
 //解压包
 //执行 install.sh
 ```
-9. 紫色背景一闪而过,修改/etc/grub.d/05_debian_theme，set_background_image
+9. 紫色背景一闪而过,修改??
 
 7. 代理，系统升级慢主要是因为下载 flashplugin-installer 软件，用镜像也不行
 ```bash
-apt install -y proxychain  # 代理
+apt install -y proxychains  # 代理
 配置代理，通过 v2ray 
 ```
 待：使用 iptable 进行代理转发。
