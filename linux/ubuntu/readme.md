@@ -20,7 +20,7 @@ ubuntu做了美化和升级。
 sudo apt-get install gnome-tweak-tool #优化系统配置
 sudo apt-get install gnome-shell-extensions 
 sudo apt install chrome-gnome-shell # 安装chrome 扩展，可以直接在网页安装
-sudo apt-get autoremove --purge gnome-shell-extension-Ubuntu-dock -y # 删除自带的dock ，不然会有冲突
+sudo apt-get autoremove --purge gnome-shell-extension-Ubuntu-dock -y # 删除自带的dock ，不然会有冲突，移除目录 sudo mv /usr/share/gnome-shell/extensions/ubuntu-dock@ubuntu.com   ******后面加.bk
 sudo apt install fonts-wqy-microhei  #字体
 ```
 
