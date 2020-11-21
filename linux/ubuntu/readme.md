@@ -61,8 +61,11 @@ mkdir /boot/grub/themes
 ```
 8. 紫色背景一闪而过, [这个插件](https://extensions.gnome.org/extension/3037/good-bye-gdm-flick/)
 
+9. 更改最小亮度：`sudo su -c "echo 24 >/sys/class/backlight/intel_backlight/brightness"`
+
 9. 代理，系统升级慢主要是因为下载 flashplugin-installer 软件，用镜像也不行
 ```bash
+dpkg -r flashplugin-installer  // 应该是删除了
 apt install -y proxychains  # 代理
 配置代理，通过 v2ray 
 ```
