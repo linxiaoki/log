@@ -108,6 +108,30 @@ time tar -cvpzf /media/Disk/myDisk/ubuntu_boot_backup@`date +%Y-%m-%d`.tar.gz /b
 ```
 [参考:Ubuntu系统备份和还原](https://blog.csdn.net/qq_35523593/article/details/78545530)
 
+## 虚拟机中还原ubuntu系统
+1.正常安装ubuntu系统（分区最好一致)
+2.虚拟机中再添加一个CD/DVD硬件（此时有两个，ubuntu的镜像文件先不要移除）。
+3.添加共享文件夹，目录指向备份压缩包的目录
+3.重启再次进入 try ubuntu 界面
+4.使用命令查看安装ubuntu所有位置，重新挂载，解压备份文件
+```bash
+sudo mkdir /mnt/ubuntu
+sudo fdisk -l  #查看位置
+sudo mount /dev/sda2 /mnt/ubuntu #(sda2为刚安装系统的位置
+sudo rm -rf /mnt/ubuntu/*   # 删除原来的文件
+sudo tar -xzpvf /mnt/sdfs/ubuntu-bk.tar.gz -C /mnt/ubuntu/   #解压备份的文件，如果是多个也要多次解压
+
+```
+5.修复Grub（遇到错误 the current session is in bios-compatibility mode。需要在虚拟机设置 UEFI 模式启动）
+```bash
+sudo add-apt-repository ppa:yannubuntu/boot-repair
+sudo apt-get update
+sudo apt-get install -y boot-repair  
+boot-repair
+```
+点击高级选项第二项：将GRUB安装在sdb上(sdb为系统安装位置）；应用，按提示操作即可。
+6.修复 /etc/fstab 文件
+
 ## 安全重启
 惨痛经验告诉我，系统假死一定不能强制关机。
 [参考](https://blog.csdn.net/sunny_580/article/details/78996975)
