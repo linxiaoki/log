@@ -119,10 +119,10 @@ sudo mkdir /mnt/ubuntu
 sudo fdisk -l  #查看位置
 sudo mount /dev/sda2 /mnt/ubuntu #(sda2为刚安装系统的位置
 sudo rm -rf /mnt/ubuntu/*   # 删除原来的文件
-sudo tar -xzpvf /mnt/sdfs/ubuntu-bk.tar.gz -C /mnt/ubuntu/   #解压备份的文件，如果是多个也要多次解压
-
+sudo tar -xzpvf /mnt/sdfs/ubuntu-bk.tar.gz -C /mnt/ubuntu/   
+#根据分区情况。解压备份的文件
 ```
-5.修复Grub（遇到错误 the current session is in bios-compatibility mode。需要在虚拟机设置 UEFI 模式启动）
+5.修复Grub（因为备份的系统是 UEFI模式，不符，会遇到错误 the current session is in bios-compatibility mode。需要在[安装虚拟机的时候选择 UEFI 模式](https://zhuanlan.zhihu.com/p/386516360)）
 ```bash
 sudo add-apt-repository ppa:yannubuntu/boot-repair
 sudo apt-get update
@@ -130,7 +130,9 @@ sudo apt-get install -y boot-repair
 boot-repair
 ```
 点击高级选项第二项：将GRUB安装在sdb上(sdb为系统安装位置）；应用，按提示操作即可。
-6.修复 /etc/fstab 文件
+
+6.修复 /etc/fstab 文件  (对照命令 blkid 的输出结果)
+7.重启
 
 ## 安全重启
 惨痛经验告诉我，系统假死一定不能强制关机。
